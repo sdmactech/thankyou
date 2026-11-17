@@ -81,10 +81,11 @@ h1{margin:16px 0 16px;color:var(--navy);font:800 clamp(2rem,3.4vw,2.7rem)/1.06 '
 .seal path{fill:none;stroke:var(--c);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 2;stroke-dashoffset:0}
 
 /* review block */
-.review{padding:52px 0 0;text-align:center}
+.review{margin-top:26px;padding-top:22px;border-top:1px solid #d5e3ec}
 h2{margin:0 0 10px;color:var(--navy);font:800 clamp(1.65rem,3vw,2.05rem)/1.15 'Nunito',system-ui,sans-serif;letter-spacing:-.02em;text-wrap:balance}
-.review p{max-width:46ch;margin:0 auto}
-.buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
+.review .ps{font-size:18px;line-height:1.58;text-wrap:pretty}
+.review .ps strong{color:var(--navy);font-weight:800;font-family:'Nunito',system-ui,sans-serif}
+.buttons{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:18px}
 .review-button{display:flex;align-items:center;justify-content:center;gap:10px;min-width:0;min-height:58px;padding:10px 12px;border-radius:16px;color:var(--navy);background:#fff;box-shadow:inset 0 0 0 1px rgba(14,26,43,.20),0 4px 0 #b9c8d4,0 12px 22px rgba(14,26,43,.10);text-decoration:none;text-align:center;font:800 1.0625rem/1.2 'Nunito',system-ui,sans-serif;text-wrap:balance;transition:transform .2s var(--ease),box-shadow .2s var(--ease);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .review-button.google{color:#fff;background:linear-gradient(180deg,#0078B0,var(--deep));box-shadow:0 4px 0 #004468,0 12px 22px rgba(0,106,156,.26)}
 .review-button:active{transform:translateY(3px);transition:none;box-shadow:inset 0 0 0 1px rgba(14,26,43,.20),0 1px 0 #b9c8d4}
@@ -92,7 +93,7 @@ h2{margin:0 0 10px;color:var(--navy);font:800 clamp(1.65rem,3vw,2.05rem)/1.15 'N
 .icon{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;flex:none;border-radius:50%;background:#fff}
 .icon.nextdoor{background:#8ED500}
 .icon svg{width:20px;height:20px}
-.review .thanks{margin-top:18px;font-size:1rem}
+.review .thanks{margin-top:16px;font-size:1rem;text-align:center}
 footer{max-width:640px;margin:44px auto 0;padding:0 20px calc(40px + env(safe-area-inset-bottom,0px));text-align:center;font-size:1rem}
 footer p + p{margin-top:0}
 footer a{display:inline-block;padding:10px 2px;font-weight:600}
@@ -109,8 +110,7 @@ main{margin-top:12px}
 .badge{font-size:clamp(1rem,5.4vw,1.3rem)}
 .letter p{font-size:17.5px}
 .signature{font-size:2.4rem}
-.buttons{grid-template-columns:minmax(0,1fr)}
-.review{padding-top:44px}
+.review .ps{font-size:17.5px}
 }
 
 /* one opening sequence, then quiet idle motion; only when motion is welcome */
@@ -159,6 +159,15 @@ main{margin-top:12px}
         <p class="closing">Thanks again,</p>
         <p class="signature">Mac</p>
         <span class="signature-detail">Mac McAhren, SDMacTech</span>
+        <section class="review" aria-labelledby="review-title">
+          <h2 id="review-title" class="vh">Share your experience</h2>
+          <p class="ps"><strong>P.S.</strong> If you have about a minute, please share your experience on Google or Nextdoor. It helps neighbors find me when they need a hand with their Macs.</p>
+          <div class="buttons">
+            <a class="review-button google" href="https://g.page/r/Cdm8YbNxgzFSEBM/review" target="_blank" rel="noopener"><span class="icon" aria-hidden="true"><svg focusable="false" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24s.92 7.54 2.56 10.78z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span><span>Leave a Google review<span class="vh"> (opens in a new tab)</span></span></a>
+            <a class="review-button" href="https://nextdoor.com/pages/applemac-consulting-san-diego-ca/" target="_blank" rel="noopener"><span class="icon nextdoor" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="#0E1A2B" d="M12 3L3 10.4V21h6.2v-5.8h5.6V21H21V10.4z"/></svg></span><span>Recommend on Nextdoor<span class="vh"> (opens in a new tab)</span></span></a>
+          </div>
+          <p class="thanks">Already left one? Thank you.</p>
+        </section>
       </article>
       <div class="pocket" aria-hidden="true"><i class="pl"></i><i class="pr"></i><i class="pb"></i><i class="pe"></i></div>
       <button class="seal-button" id="sealbtn" type="button" disabled aria-hidden="true" aria-label="Spin the checkmark seal"><span class="seal-shadow" aria-hidden="true"></span><span class="seal-persp"><span class="seal" id="seal" aria-hidden="true"><span class="seal-sway"><span class="seal-coin"><i class="slab" style="--i:0"></i><i class="slab" style="--i:1"></i><i class="slab" style="--i:2"></i><i class="slab" style="--i:3"></i><i class="slab" style="--i:4"></i><i class="slab" style="--i:5"></i><i class="slab" style="--i:6"></i><i class="slab" style="--i:7"></i><i class="slab" style="--i:8"></i><i class="slab" style="--i:9"></i><i class="slab" style="--i:10"></i><span class="seal-face"></span>
@@ -168,15 +177,6 @@ main{margin-top:12px}
         <svg viewBox="0 0 100 100" style="--z:14px;--c:#0E1A2B" focusable="false"><path pathLength="1" d="M27 52L44 69L74 33"/></svg>
       </span></span></span></span></button>
     </div>
-  </section>
-  <section class="review" aria-labelledby="review-title">
-    <h2 id="review-title">Share your experience</h2>
-    <p>If you have about a minute, please share your experience on Google or Nextdoor. It helps neighbors find me when they need a hand with their Macs.</p>
-    <div class="buttons">
-      <a class="review-button google" href="https://g.page/r/Cdm8YbNxgzFSEBM/review" target="_blank" rel="noopener"><span class="icon" aria-hidden="true"><svg focusable="false" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24s.92 7.54 2.56 10.78z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span><span>Leave a Google review<span class="vh"> (opens in a new tab)</span></span></a>
-      <a class="review-button" href="https://nextdoor.com/pages/applemac-consulting-san-diego-ca/" target="_blank" rel="noopener"><span class="icon nextdoor" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="#0E1A2B" d="M12 3L3 10.4V21h6.2v-5.8h5.6V21H21V10.4z"/></svg></span><span>Recommend on Nextdoor<span class="vh"> (opens in a new tab)</span></span></a>
-    </div>
-    <p class="thanks">Already left one? Thank you.</p>
   </section>
 </main>
 <footer>
